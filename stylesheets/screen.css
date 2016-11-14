@@ -2,6 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
 /* line 5, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -65,4 +66,177 @@ a img {
 /* line 116, ../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block;
+}
+
+/* line 2, ../sass/_global.scss */
+.fade-in-all {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 999999;
+}
+
+/* line 11, ../sass/_global.scss */
+.waypoint.up {
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+  transition: all 0.6s ease-in-out;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  top: 60px;
+}
+/* line 17, ../sass/_global.scss */
+.waypoint.up.visible {
+  opacity: 1;
+  visibility: visible;
+  top: 0;
+}
+
+/* line 23, ../sass/_global.scss */
+.waypoint.fade-in {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 27, ../sass/_global.scss */
+.waypoint.fade-in.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 32, ../sass/_global.scss */
+.waypoint.slide-in {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  left: -60px;
+}
+/* line 38, ../sass/_global.scss */
+.waypoint.slide-in.visible {
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 44, ../sass/_global.scss */
+.waypoint.blur-in {
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(5px);
+}
+/* line 50, ../sass/_global.scss */
+.waypoint.blur-in.visible {
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0px);
+}
+
+/* line 58, ../sass/_global.scss */
+.btn {
+  padding: 12px 30px;
+  text-align: center;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  border-radius: 0;
+}
+/* line 66, ../sass/_global.scss */
+.btn:hover {
+  border: 3px solid black;
+  color: black;
+}
+
+/* line 3, ../sass/_base.scss */
+[class*="fontawesome-"]:before {
+  font-family: 'FontAwesome', sans-serif;
+}
+
+@font-face {
+  font-family: 'Futura-Light';
+  src: url("../fonts/futura/FuturaStd-Light.eot");
+  src: url("../fonts/futura/FuturaStd-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaStd-Light.woff") format("woff"), url("../fonts/futura/FuturaStd-light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Futura';
+  src: url("../fonts/futura/FuturaStd-Book.eot");
+  src: url("../fonts/futura/FuturaStd-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/futura/FuturaStd-Book.woff") format("woff"), url("../fonts/futura/FuturaStd-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gotham';
+  src: url("../fonts/gotham/gothambook-webfont.eot");
+  src: url("../fonts/gotham/gothambook-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gotham/gothambook-webfont.woff2") format("woff2"), url("../fonts/gotham/gothambook-webfont.woff") format("woff"), url("../fonts/gotham/gothambook-webfont.ttf") format("truetype"), url("../fonts/gotham/gothambook-webfont.svg#gothambookregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 46, ../sass/_base.scss */
+body {
+  font-family: "Futura-Light", Helvetica, Arial, Sans-serif;
+  font-size: 24px;
+}
+
+/* line 50, ../sass/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Gotham", serif, Arial, Sans-serif;
+}
+
+/* line 4, ../sass/_layout.scss */
+.fixed-header,
+.page-header {
+  width: 100%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* line 11, ../sass/_layout.scss */
+.fixed-header {
+  position: fixed;
+  z-index: 9999;
+}
+
+/* line 15, ../sass/_layout.scss */
+.page-header {
+  position: relative;
+}
+
+/* line 18, ../sass/_layout.scss */
+.nav-container {
+  position: relative;
+  height: 100%;
+}
+
+/* line 22, ../sass/_layout.scss */
+.nav-fixed,
+.nav-page {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 0;
+  font-family: "Gotham", serif, Arial, Sans-serif;
+}
+
+/* line 32, ../sass/_layout.scss */
+.section {
+  border: 1px solid red;
 }

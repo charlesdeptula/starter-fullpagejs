@@ -1,15 +1,5 @@
-<?php get_header(); ?>
-
-<div class="section">
-</div>
-<div class="section">
-</div>
-<div class="section">
-</div>
-<div class="section">
-</div>
-
-
-
-
-<?php get_footer(); ?>
+<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+	<div><?php the_content(); ?></div>
+<?php endwhile; else : ?>
+	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+<?php endif; ?>

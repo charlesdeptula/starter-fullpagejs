@@ -19,5 +19,14 @@
 
 </head>
 <body>
-	
+
+<div class="fade-in-all">
+</div>
+
+<?php if (is_front_page()) { 
+	get_template_part('fixed-header');  
+} else { 
+	get_template_part('page-header');
+} ?>
+
 <div id="wrapper">

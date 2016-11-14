@@ -7,3 +7,4 @@ Included Functionality:
 - Waypoints.js
 - Mixins file with bootstrap breakpoints
 - Starter styles & fonts
+- Font awesome icon font

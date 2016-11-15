@@ -1,71 +1,83 @@
-// fade in body
+// style overrides
+.text-dark {
+	color: #666 !important;
+}
+// layouts
+.no-gutter [class*="col"] { 
+	padding: 0; 
+}
+.block-center {
+	@include block;
+	margin: 0 auto;
+}
+
+// EFFECTS
 .fade-in-all {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background: white;
+	background: black;
 	z-index: 999999;
 }
+.overlay {
+	@include ease(.5s);
+	opacity: 0;
+	position: absolute;
+	width: 100%; height: 100%;
+	background: transparent;
+	z-index: $high;
+	&:hover { opacity: 1; }
+	&.overlay-dark { background: rgba(0,0,0,0.66); }
+	&.overlay-light { background: rgba(255,250,250,0.66); }
+}
+.overlay-effect-in,
+.section-effect-in {
+	opacity: 0;
+	visibility: hidden; 
+}
+.overlay-effect-in {
+	@include ease(.5s);
+}
+.section-effect-in { 
+	@include ease(1s);
+	position: relative; 
+}
+.effect-blur {
+	filter: blur(5px);
+}
+.section-effect-in.effect-up {
+	top: 100px;
+}
+.overlay-effect-in.effect-up {
+	margin-top: 50px;
+}
+.overlay:hover .overlay-effect-in.effect-up {
+	margin-top: 0;
+}
+.section.active .section-effect-in.effect-up{
+	top: 0;
+}
+.section.active .section-effect-in,
+.overlay:hover .overlay-effect-in {
+	opacity: 1;
+	visibility: visible;
+	filter: blur(0px);
+}
 
-// WAYPOINT FUNCTIONALITY
-.waypoint.up {
-	@include ease(.6s);
-	position: relative;
-	opacity: 0;
-	visibility: hidden; 
-	top: 60px;
-	&.visible {
-		opacity: 1;
-		visibility: visible;
-		top: 0;
-	}
-}
-.waypoint.fade-in {
-	@include ease(1s);
-	opacity: 0;
-	visibility: hidden; 
-	&.visible {
-		opacity: 1;
-		visibility: visible;
-	}
-}
-.waypoint.slide-in {
-	@include ease(1s);
-	position: relative;
-	opacity: 0;
-	visibility: hidden; 
-	left: -60px;
-	&.visible {
-		left: 0;
-		opacity: 1;
-		visibility: visible;
-	}
-}
-.waypoint.blur-in {
-  @include ease(1s);
-  position: relative;
-  opacity: 0;
-  visibility: hidden; 
-  filter: blur(5px);
-  &.visible {
-    opacity: 1;
-    visibility: visible;
-    filter: blur(0px);
-  }
-}
 
 // btns
 .btn {
+	@include ease(.25s);
 	padding: 12px 30px;
+	margin-top: 60px;
 	text-align: center;
-	display: inline-block;
+	display: block;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 14px;
 	border-radius: 0;
 	&:hover {
-		border: 3px solid black;
-		color: black;
+		background: white;
 	}
 }
 

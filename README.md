@@ -4,7 +4,7 @@ An empty wordpress theme setup for use with fullpage.js and wordpress
 
 Included Functionality:
 - Bootstrap
-- Waypoints.js
+- Custom effects & overlays
 - Mixins file with bootstrap breakpoints
 - Starter styles & fonts
-- Font awesome icon font
+- Entypo icon font

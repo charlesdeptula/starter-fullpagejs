@@ -1,25 +1,20 @@
 
 // ::::::::::: HEADINGS ::::::::::::::
 
-.fixed-header,
-.page-header {
+.fullpage-header,
+.secondary-header {
 	width: 100%;
 	height: 50px;
 	top: 0; left: 0;
 	background: rgba(0,0,0,0.9);
-}
-.fixed-header {
 	position: absolute;
 	z-index: 9999;
-}
-.page-header {
-	position: relative;
 }
 .nav-container { 
 	position: relative;
 	height: 100%;
 }
-.nav-fixed,
+.nav-fullpage,
 .nav-page {
 	@include center(false,true);
 	right: 0;

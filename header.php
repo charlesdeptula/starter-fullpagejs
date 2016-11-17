@@ -24,9 +24,9 @@
 </div>
 
 <?php if (is_front_page()) { 
-	get_template_part('fixed-header');  
-} else { 
+	get_template_part('fullpage-header'); ?> 
+	<div id="wrapper">
+<?php } else { 
 	get_template_part('page-header');
 } ?>
 
-<div id="wrapper">
